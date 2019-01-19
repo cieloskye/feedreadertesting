@@ -1,0 +1,26 @@
+{
+  "name": "feedreadertesting",
+  "version": "1.0.0",
+  "description": "Using Jasmine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cieloskye/feedreadertesting.git"
+  },
+  "keywords": [
+    "Jasmine",
+    "Optimization",
+    "Tests",
+    "JavaScript",
+    "Testing"
+  ],
+  "author": "Skye L. de Moya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cieloskye/feedreadertesting/issues"
+  },
+  "homepage": "https://github.com/cieloskye/feedreadertesting#readme"
+}
