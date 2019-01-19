@@ -22,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/cieloskye/feedreadertesting/issues"
   },
-  "homepage": "https://github.com/cieloskye/feedreadertesting#readme"
+  "homepage": "https://github.com/cieloskye/feedreadertesting#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp-autoprefixer": "^6.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-sass": "^4.0.2"
+  }
 }
