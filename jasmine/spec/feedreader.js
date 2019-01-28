@@ -1,8 +1,14 @@
-/* feedreader.js
- *
+// feedreader.js
+'use strict';
+
+ /*
  * This is the spec file that Jasmine will read and contains
  * all of the tests that will be run against your application.
  */
+
+ //Jasmine is a behavior-driven development framework for testing JavaScript code. 
+ //It does not depend on any other JavaScript frameworks. It does not require a DOM. 
+ //And it has a clean, obvious syntax so that you can easily write tests. - jasmine.github.io
 
 /* We're placing all of our tests within the $() function,
  * since some of these tests may require DOM elements. We want
@@ -26,28 +32,30 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
+        //URL LOOP
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
 
-
+         //OJECT NAME LOOP
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
     });
 
-
+    //MENU
     /* TODO: Write a new test suite named "The menu" */
 
+        //DEFAULT HIDDEN
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
 
+         //CLICK FUNCTIONALITY 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
@@ -61,6 +69,28 @@ $(function() {
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
+
+https://jasmine.github.io/tutorials/async   
+beforeEach(function(done) {
+    setTimeout(function() {
+         // do some stuff
+        done();
+    }, 100);
+});
+
+
+beforeEach(async function() {
+  await someLongFunction();
+});
+
+beforeEach(function() {
+  return new Promise(function(resolve, reject) {
+    // do some stuff
+    resolve();
+  });
+});
+
+
          */
 
     /* TODO: Write a new test suite named "New Feed Selection" */
