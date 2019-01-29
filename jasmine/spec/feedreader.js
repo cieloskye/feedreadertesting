@@ -65,7 +65,7 @@ $(function() {
         loadFeed(0, done);
       });  
         
-      it('fully loaded', () => {
+      it('fully loaded feed', () => {
         const feed = document.querySelector('.feed');
         expect(feed.children.lenth < 0).toBe(false); 
       });
@@ -75,15 +75,31 @@ $(function() {
     });  
 
 //NEW FEED SELECTION
-//    describe('New Feed Selection', () => {
+   describe('New Feed Selection', () => {
+      
+      const feed = document.querySelector('.feed');
+      const initalFeed = [];
+      const updatedFeed = [];
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */      
-  //  });  
+      beforeEach(function(done) {
+        loadFeed(0);
+        Array.from(feed.children).forEach((entry) => {
+          initialFeed.push(entry.innerText);
+        });
+        loadFeed(1, done);
+      });  
+      
+      it.('feed updates', () => {
+        Array.from(feed.children).forEach((entry) => {
+          updatedFeed.push(entry.innerText);
+        expect(entry.innerText === initalFeed).tobe(false);
+        });
+        
+      }); 
+  
+    }); 
+
 }());
-
 
 
 
