@@ -5,17 +5,16 @@ const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 const jasmineBrowser = require('gulp-jasmine-browser');
 
-gulp.task('default', ['styles', 'lint'], function() {
-    gulp.watch('sass/**/*.scss', ['styles']);
-    gulp.watch('js/**/*.js', ['lint']);
+gulp.task('default', ('styles', 'lint'), function() {
+    gulp.watch('sass/**/*.scss', ('styles');
+    gulp.watch('js/**/*.js', ('lint');
     browserSync.init({
         server: './'
     });
 });
 
-gulp.task('styles', function() {
-    gulp
-        .src('sass/**/*.scss')
+gulp.task('styles', function(done) {
+    gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(
             autoprefixer({
@@ -24,6 +23,7 @@ gulp.task('styles', function() {
         )
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
+    done();
 });
 
 gulp.task('lint', function() {
