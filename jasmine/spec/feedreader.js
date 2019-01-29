@@ -56,11 +56,8 @@ $(function() {
           expect(body.classList.contains('menu-hidden')).toBe(true);
         }); 
     });
-
-}());
-
-
-    /* TODO: Write a new test suite named "Initial Entries" */
+//INITIAL ENTRIES
+    describe('Initial Entries', () => {
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -87,20 +84,27 @@ beforeEach(function() {
     resolve();
   });
 });
+*/
 
 
-         */
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    });  
+
+//NEW FEED SELECTION
+    describe('New Feed Selection', () => {
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
 
-//}());
+
+      
+    });  
+}());
 
 
+    
 
 
         
