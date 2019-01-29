@@ -5,6 +5,10 @@
         "Jasmine is a behavior-driven development framework for testing 
             JavaScript code. It does not depend on any other JavaScript 
             frameworks. It does not require a DOM." Source: jasmine.github.io
+
+      Special Thanks to:
+        https://devhints.io/jasmine
+        https://matthewcranford.com      
     */
 
 'use strict';
@@ -74,29 +78,24 @@ $(function() {
 
     });  
 
+
 //NEW FEED SELECTION
    describe('New Feed Selection', () => {
       
-      const feed = document.querySelector('.feed');
-      const initalFeed = [];
-      const updatedFeed = [];
+      const feed = $('.feed');
+      let initalFeed = [];
+      //const updatedFeed = [];
 
-      beforeEach(function(done) {
-        loadFeed(0);
-        Array.from(feed.children).forEach((entry) => {
-          initialFeed.push(entry.innerText);
+      beforeEach((done) => {
+        loadFeed(0, () => {
+          var feed = $('.feed').html();
+          loadFeed(1, done);
         });
-        loadFeed(1, done);
       });  
       
-      it.('feed updates', () => {
-        Array.from(feed.children).forEach((entry) => {
-          updatedFeed.push(entry.innerText);
-        expect(entry.innerText === initalFeed).tobe(false);
+      it('feed updates', () => {
+        expect($('.feed').html()).not.toEqual(feed);
         });
-        
-      }); 
-  
     }); 
 
 }());
