@@ -10,34 +10,36 @@
 'use strict';
 
 //Placing all tests within the $() function, to ensure they don't run until the DOM is ready.
-$(() => {
+$(function() {
     //RSS FEEDS/allFeeds
     //This suite is all about the RSS feeds definitions, 
     //referenced as the allFeeds variable in our application.
     describe('RSS Feeds', () => {
         //Test allFeeds variable to ensure it is defined & not empty.
         it('are defined', () => {
-            expect(allFeeds).toBeDefined();
-            expect(allFeeds.length).not.toBe(0);
+            expect((allFeeds).toBeDefined());
+            expect((allFeeds.length).not.toBe(0));
         });
 
         //URL LOOP
         it('URL defined', () => {
             for(let feed of allFeeds) {
-                expect(feed.url).toBeDefined();
-                expect(feed.url.length).not.toBe(0);
+                expect((feed.url).toBeDefined());
+                expect((feed.url.length).not.toBe(0));
             } 
         });
 
          //NAME LOOP
         it('Name defined', () => {
             for(let feed of allFeeds) {
-                expect(feed.name).toBeDefined();
-                expect(feed.name.length).not.toBe(0);
+                expect((feed.name).toBeDefined());
+                expect((feed.name.length).not.toBe(0));
             }
         });    
     });
 
+}());
+/*
 //THE MENU
     describe('The Menu', () => {
         //DEFAULT HIDDEN
@@ -56,12 +58,7 @@ $(() => {
         });    
     });
 
-}());
-
-
-
-
-         //CLICK FUNCTIONALITY 
+     //CLICK FUNCTIONALITY 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
@@ -106,3 +103,10 @@ beforeEach(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+//}());
+
+
+
+
+        
