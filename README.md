@@ -6,14 +6,14 @@
 - [Contributing](#contributing)
 
 ## Instructions
-* Option 1: Browser
-        * Clone or download project zipfile, 
+	* **Option 1: Browser**
+        * Clone or download project zipfile 
         * uncompress/open zipfile
         * open index.html in your browser
 
 
 
-* Option 2: Locally
+	* **Option 2: Locally**
         * Download dependancies:
             * Node.js
             * nmp
