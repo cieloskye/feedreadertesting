@@ -39,9 +39,10 @@ $(() => {
     });
 
 //THE MENU
-    describe('the menu', () => {
-        it('', () => {
-      
+    describe('The Menu', () => {
+        //DEFAULT HIDDEN
+        it('menu hidden', () => {
+            expect(body.classList.contains('menu-hidden')).toBe(true);
         });
         //
         it('', () => {
@@ -58,12 +59,6 @@ $(() => {
 
 
 
-        //DEFAULT HIDDEN
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
-         */
 
          //CLICK FUNCTIONALITY 
          /* TODO: Write a test that ensures the menu changes
