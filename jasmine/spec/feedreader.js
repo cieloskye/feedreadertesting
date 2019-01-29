@@ -38,25 +38,21 @@ $(function() {
         });    
     });
 
-}());
-/*
 //THE MENU
     describe('The Menu', () => {
         //DEFAULT HIDDEN
         it('menu hidden', () => {
             const body = document.querySelector('body');
-            expect(body.classList.contains('menu-hidden').toBe(true));
+            expect(body.classList.contains('menu-hidden')).toBe(true);
         });
-        //
-        it('', () => {
+        
+        //CLICK FUNCTIONALITY 
+       // it('', () => {
 
-        });
- 
-        //
-        it('', () => {
-
-        });    
+       // }); 
     });
+
+}());
 
      //CLICK FUNCTIONALITY 
          /* TODO: Write a test that ensures the menu changes
