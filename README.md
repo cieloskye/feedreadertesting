@@ -6,24 +6,22 @@
 - [Contributing](#contributing)
 
 ## Instructions
-
-    Option 1: Browser
-        Simply download zipfile, 
-        unzip it,
-        & open the index.html in your browser.
-
+Option 1: Browser
+        * Clone or download project zipfile, 
+        * uncompress/open zipfile
+        * open index.html in your browser
 
 
-    Option 2: Locally
-        
+
+Option 2: Locally
         * Download dependancies:
             * Node.js
             * nmp
-            *[Jasmine](http://jasmine.github.io/)
-        
-        * Clone or Download Project zipfile
-        
-        * Open with terminal or in your favorite code editor. 
+            * [Jasmine](http://jasmine.github.io/)
+        * Clone or download project zipfile
+        * Open with terminal or in your favorite code editor 
+
+
 
 ## Contributing
 
