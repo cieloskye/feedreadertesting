@@ -47,19 +47,17 @@ $(function() {
         });
         
         //CLICK FUNCTIONALITY 
-       // it('', () => {
-
-       // }); 
+        it('menu click', () => {
+          const body = document.querySelector('body');
+          const menu = document.querySelector('.menu-icon-link');
+          menu.click();
+          expect(body.classList.contains('menu-hidden')).toBe(false);
+          menu.click();
+          expect(body.classList.contains('menu-hidden')).toBe(true);
+        }); 
     });
 
 }());
-
-     //CLICK FUNCTIONALITY 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
 
 
     /* TODO: Write a new test suite named "Initial Entries" */
