@@ -40,7 +40,7 @@ $(function() {
         });
 
         //URL LOOP
-        it('URL Defined', () => {
+        it('URL defined', () => {
             for(let feed of allFeeds) {
                 expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0);
@@ -49,15 +49,13 @@ $(function() {
         })
 
     
-         //OJECT NAME LOOP
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */ 
-          it('Name Defined', () => {
-            expect().toBeDefined();
-        })
-        
+         //NAME LOOP
+        it('Name defined', () => {
+            for(let feed of allFeeds) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+            }
+        });    
     });
 
 //MENU
