@@ -30,7 +30,7 @@ $(function() {
         });
 
          //NAME LOOP
-        it('Name defined', () => {
+        it('name defined', () => {
             for(let feed of allFeeds) {
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
@@ -56,55 +56,35 @@ $(function() {
           expect(body.classList.contains('menu-hidden')).toBe(true);
         }); 
     });
+
+
 //INITIAL ENTRIES
     describe('Initial Entries', () => {
+      
+      beforeEach(function(done) {
+        loadFeed(0, done);
+      });  
+        
+      it('fully loaded', () => {
+        const feed = document.querySelector('.feed');
+        expect(feed.children.lenth < 0).toBe(false); 
+      });
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
-
-https://jasmine.github.io/tutorials/async   
-beforeEach(function(done) {
-    setTimeout(function() {
-         // do some stuff
-        done();
-    }, 100);
-});
-
-
-beforeEach(async function() {
-  await someLongFunction();
-});
-
-beforeEach(function() {
-  return new Promise(function(resolve, reject) {
-    // do some stuff
-    resolve();
-  });
-});
-*/
-
-
+      
 
     });  
 
 //NEW FEED SELECTION
-    describe('New Feed Selection', () => {
+//    describe('New Feed Selection', () => {
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
-         */
-
-
-      
-    });  
+         */      
+  //  });  
 }());
 
 
-    
 
 
         
