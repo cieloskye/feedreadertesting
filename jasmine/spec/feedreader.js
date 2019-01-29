@@ -1,26 +1,21 @@
 // feedreader.js
     /*  This is the spec file that Jasmine will read and contains 
         all of the tests that will be run against your application.
-    "Jasmine is a behavior-driven development framework for testing 
-    JavaScript code. It does not depend on any other JavaScript 
-    frameworks. It does not require a DOM."" Source: jasmine.github.io
+
+        "Jasmine is a behavior-driven development framework for testing 
+            JavaScript code. It does not depend on any other JavaScript 
+            frameworks. It does not require a DOM." Source: jasmine.github.io
     */
 
 'use strict';
 
-
- //We're placing all of our tests within the $() function,
- //to ensure they don't run until the DOM is ready.
- 
-//RSS FEEDS/allFeeds
+//Placing all tests within the $() function, to ensure they don't run until the DOM is ready.
+$(() => {
+    //RSS FEEDS/allFeeds
     //This suite is all about the RSS feeds definitions, 
     //referenced as the allFeeds variable in our application.
-
-$(function() {
-
-    describe('RSS Feeds', function() {
-        // Udacity Written - Test allFeeds variable to ensure it is 
-        // defined & not empty.
+    describe('RSS Feeds', () => {
+        //Test allFeeds variable to ensure it is defined & not empty.
         it('are defined', () => {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
@@ -33,7 +28,7 @@ $(function() {
                 expect(feed.url.length).not.toBe(0);
             } 
         });
-        
+
          //NAME LOOP
         it('Name defined', () => {
             for(let feed of allFeeds) {
@@ -44,8 +39,24 @@ $(function() {
     });
 
 //THE MENU
-    
-    /* TODO: Write a new test suite named "The menu" */
+    describe('the menu', () => {
+        it('', () => {
+      
+        });
+        //
+        it('', () => {
+
+        });
+ 
+        //
+        it('', () => {
+
+        });    
+    });
+
+}());
+
+
 
         //DEFAULT HIDDEN
         /* TODO: Write a test that ensures the menu element is
@@ -60,6 +71,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
@@ -98,4 +110,3 @@ beforeEach(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-}());
