@@ -42,7 +42,8 @@ $(() => {
     describe('The Menu', () => {
         //DEFAULT HIDDEN
         it('menu hidden', () => {
-            expect(body.classList.contains('menu-hidden')).toBe(true);
+            const body = document.querySelector('body');
+            expect(body.classList.contains('menu-hidden').toBe(true));
         });
         //
         it('', () => {
