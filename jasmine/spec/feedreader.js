@@ -71,7 +71,7 @@ $(function() {
         
       it('fully loaded feed', () => {
         const feed = document.querySelector('.feed');
-        expect(feed.children.lenth < 0).toBe(false); 
+        expect($('.feed .entry').length).toBe(false);
       });
 
       
@@ -80,24 +80,20 @@ $(function() {
 
 
 //NEW FEED SELECTION
-   describe('New Feed Selection', () => {
+   describe('New Feed Selection', () => {     
       
       const feed = $('.feed');
-      let initalFeed = [];
-      //const updatedFeed = [];
-
+ 
       beforeEach((done) => {
         loadFeed(0, () => {
-          var feed = $('.feed').html();
           loadFeed(1, done);
         });
       });  
       
       it('feed updates', () => {
         expect($('.feed').html()).not.toEqual(feed);
-        });
+      });
     }); 
-
 }());
 
 
