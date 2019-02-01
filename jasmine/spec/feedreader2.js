@@ -70,9 +70,10 @@ $(function() {
       });  
         
       it('fully loaded feed', () => {
-        //const feed = $('.feed');
-        expect($('.feed .entry').length < 0).toBe(false);
-      });
+        //const feed = document.querySelector('.feed');
+        for(let feed of feeds) {
+        expect($('.feed .entry').length).toBe(false);
+      }});
 
       
 
